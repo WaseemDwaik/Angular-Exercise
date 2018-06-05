@@ -1,0 +1,55 @@
+.container {
+  text-align: center
+}
+
+.inner {
+  display: inline-block;
+}
+
+tr.border td {
+  border-radius: 50px;
+}
+
+table {
+  text-align: left;
+}
+
+th {
+  text-align: center;
+  background: rgb(244, 251, 253);
+  padding: 15px;
+  border-radius: 50px;
+}
+
+td {
+  background: rgb(252, 245, 245);
+  padding: 10px;
+}
+
+.filter {
+  margin-bottom: 10px;
+  border: 1px solid lightblue;
+  border-radius: 20px;
+}
+
+.searchBar {
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px lightblue solid;
+  border-right: 1px lightblue solid;
+}
+
+a {
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid rgb(182, 232, 250);
+  border-radius: 15px;
+  margin: 5px;
+  background: rgb(244, 250, 252);
+}
+
+a :hover {}
+
+.paging {
+  margin-top: 15px;
+}

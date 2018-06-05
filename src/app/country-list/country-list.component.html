@@ -1,0 +1,34 @@
+<div class="container" *ngIf="countries">
+  <div class="inner">
+    <div class="filter">
+      <label for="country">Enter Country Name :</label>
+      <input class="searchBar" type="text" [(ngModel)]="filterInput" (keyup)="filter()" placeholder="Filter By Country Name">
+    </div>
+    <table class="border">
+      <tr class="border">
+        <th>Country Name</th>
+        <th>Subregion</th>
+        <th>Population</th>
+        <th>Timezone</th>
+        <th>Capital</th>
+      </tr>
+      <tr class="border" *ngFor="let country of currentCountries">
+        <td>{{country.name}}</td>
+        <td>{{country.subregion}}</td>
+        <td>{{country.population}}</td>
+        <td>{{country.timezones[0]}}</td>
+        <td>{{country.capital}}</td>
+      </tr>
+      <tr style="text-align:center" *ngIf="filteredCountries.length === 0">
+        <td colspan="5">No Such Country!</td>
+      </tr>
+    </table>
+    <div>
+      <div class="paging">
+        <a (click)="changePage('prev')">Prev-Page</a>
+        {{pageNumber}}
+        <a (click)="changePage('next')">Next-Page</a>
+      </div>
+    </div>
+  </div>
+</div>
